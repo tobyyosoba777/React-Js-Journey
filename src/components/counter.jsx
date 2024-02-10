@@ -11,6 +11,18 @@ class Counter extends Component {
         this.setState({count: this.state.count + 1})
     }
 
+    handleIncrement2 = () => {
+        this.setState({count: this.state.count + 2})
+    }
+
+    handleIncrement3 = () => {
+        this.setState({count: this.state.count + 3})
+    }
+
+    handleIncrement10 = () => {
+        this.setState({count: this.state.count + 10})
+    }
+
     renderTags = () => {
         if(this.state.tags.length === 0) return <p>There are no Tags</p>
         return <ul>{this.state.tags.map(tag => <li key={tag}>{ tag }</li>)}</ul>
@@ -26,6 +38,18 @@ class Counter extends Component {
                     fontSize: 15,
                     fontWeight: 'bold'
                 }} onClick={this.handleIncrement} className='btn btn-secondary btn-sm'>Increment</button>
+                <button style={{
+                    fontSize: 15,
+                    fontWeight: 'bold'
+                }} onClick={this.handleIncrement2} className='btn btn-primary btn-sm'>Increment x2</button>
+                <button style={{
+                    fontSize: 15,
+                    fontWeight: 'bold'
+                }} onClick={this.handleIncrement3} className='btn btn-success btn-sm'>Increment x3</button>
+                <button style={{
+                    fontSize: 15,
+                    fontWeight: 'bold'
+                }} onClick={this.handleIncrement10} className='btn btn-danger btn-sm'>Increment x10</button>
             </div>
         );
     }
@@ -33,7 +57,7 @@ class Counter extends Component {
     getBadgeClasses = () => {
         let classes = 'badge m-2 badge-'
         let { count } = this.state
-        classes += count === 0? 'dark': count === 1? 'warning': count === 2? 'success': 'primary'
+        classes += count === 0? 'danger': count === 1? 'warning': count === 2? 'success': 'primary'
         return classes
     }
 

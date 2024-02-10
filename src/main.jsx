@@ -7,7 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import CounterNew1 from './components/counterNew1.jsx';
 import Counter1 from './components/Counter1.jsx';
 import Saved from './components/Saved.jsx';
-import Saved1 from './components/Saved1.jsx';
+import Navbar from './components/Navbar.jsx';
+// import Saved1 from './components/Saved1.jsx';
 
 const element = <h1>Hello World</h1>;
 
@@ -16,6 +17,7 @@ console.log(element);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
+    <Navbar/>
     <Counter/>
     {/* <Counter1/> */}
     {/* <Counternew/> */}
