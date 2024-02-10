@@ -1,0 +1,47 @@
+React is a JavaScript library for building fast and interactive UIs
+
+JSX - JavaScript XML allows us to create HTML Style templates in components
+and in the background a transpiler called babel converts the JSX Templates
+into HTML And it renders the HTML to the DOM
+
+class is a reserved keyword in JavaScript that is why we cannot use it in JSX
+and we use className instead, 
+
+The transpiler "babel" is the one responsible for converting the className 
+keyword to class when we inspect the HTML in the browser
+
+Components are the building blocks and the beating hearts of any react application
+A component is a piece of the User Interface. Every react application is just a 
+tree of components
+
+a typical react app contains different components where the components is a 
+self contained section of contents eg the sidebar, navbar, article
+
+components can contain their own templates and logic
+
+The root component is the first component that is initially rendered to the 
+DOM in the HTML file and it sits at the top of the tree components structure
+this is the App.jsx file
+
+components can be nested into other components 
+
+If you import a CSS File into a root component, the styles applies to not only the 
+root component alone but also to the nested components in the App.jsx file
+
+In react the {} curly braces is used to signify that you are passing in a JavaScript
+expression, you cannot
+
+You cannot render object into react curly braces
+
+State:
+with react we no longer have to work with the browser DOM API in browsers,
+In other words we no longer have to write eventlisteners or DOM manipulation code 
+to manipulate elements of the Site, we just have to change the state of our 
+components and react will automatically update the DOM to match that component 
+with our current state 
+
+React is called react because when a state changes it essentially reacts to 
+state changes and update the DOM
+
+React is only responsible for rendering the View and make sure it is in sync with 
+the state
