@@ -23,6 +23,10 @@ class Counter extends Component {
         this.setState({count: this.state.count + 10})
     }
 
+    handleIncrement20 = () => {
+        this.setState({count: this.state.count + 20})
+    }
+
     renderTags = () => {
         if(this.state.tags.length === 0) return <p>There are no Tags</p>
         return <ul>{this.state.tags.map(tag => <li key={tag}>{ tag }</li>)}</ul>
@@ -57,7 +61,7 @@ class Counter extends Component {
                 }} onClick={this.handleIncrement10} className='btn btn-danger btn-sm'>Increment x10</button>
                 <button 
                 style={this.style}
-                onClick={} className='btn btn-success btn-sm'>Increment x20</button>
+                onClick={this.handleIncrement20} className='btn btn-success btn-sm'>Increment x20</button>
             </div>
             
         );
