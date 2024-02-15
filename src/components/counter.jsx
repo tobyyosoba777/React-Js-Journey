@@ -27,10 +27,15 @@ class Counter extends Component {
         if(this.state.tags.length === 0) return <p>There are no Tags</p>
         return <ul>{this.state.tags.map(tag => <li key={tag}>{ tag }</li>)}</ul>
     }
+    style={
+        fontSize: 15,
+        fontWeight: 'bold'
+    }
 
     render() { 
         return (
             <div>
+                
                 {this.state.tags.length === 0 && 'Please create a new tag!'}
                 {this.renderTags()}
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
@@ -50,7 +55,11 @@ class Counter extends Component {
                     fontSize: 15,
                     fontWeight: 'bold'
                 }} onClick={this.handleIncrement10} className='btn btn-danger btn-sm'>Increment x10</button>
+                <button 
+                style={this.style}
+                onClick={} className='btn btn-success btn-sm'>Increment x20</button>
             </div>
+            
         );
     }
 
