@@ -6,8 +6,8 @@ class Counter extends Component {
         tags: ['tag1', 'tag2', 'tag3'],
      }; 
 
-    handleIncrement = () => {
-        console.log("Incremented", this)
+    handleIncrement = (product) => {
+        console.log(product)
         this.setState({count: this.state.count + 1})
     }
 
@@ -24,7 +24,13 @@ class Counter extends Component {
     }
 
     handleIncrement20 = () => {
-        this.setState({count: this.state.count + 20})
+        setTimeout(() => {
+            this.setState({count: this.state.count + 20})
+        }, 3000);
+    }
+
+    doHandleIncrement = () => {
+        this.handleIncrement20({id: 1});
     }
 
     renderTags = () => {
@@ -46,8 +52,8 @@ class Counter extends Component {
                 <button style={{
                     fontSize: 15,
                     fontWeight: 'bold'
-                }} onClick={this.handleIncrement} className='btn btn-secondary btn-sm'>Increment</button>
-                <button style={{
+                }} onClick={this.doHandleIncrement()} className='btn btn-secondary btn-sm'>Increment</button>
+                {/* <button style={{
                     fontSize: 15,
                     fontWeight: 'bold'
                 }} onClick={this.handleIncrement2} className='btn btn-primary btn-sm'>Increment x2</button>
@@ -61,7 +67,7 @@ class Counter extends Component {
                 }} onClick={this.handleIncrement10} className='btn btn-danger btn-sm'>Increment x10</button>
                 <button 
                 style={this.style}
-                onClick={this.handleIncrement20} className='btn btn-success btn-sm'>Increment x20</button>
+                onClick={this.handleIncrement20} className='btn btn-success btn-sm'>Increment x20</button> */}
             </div>
             
         );

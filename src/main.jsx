@@ -8,6 +8,7 @@ import CounterNew1 from './components/counterNew1.jsx';
 import Counter1 from './components/Counter1.jsx';
 import Saved from './components/Saved.jsx';
 import Navbar from './components/Navbar.jsx';
+import CounterIncrement from './components/CounterIncrement.jsx';
 // import Saved1 from './components/Saved1.jsx';
 
 const element = <h1>Hello World</h1>;
@@ -17,8 +18,9 @@ console.log(element);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <Navbar/>
-    <Counter/>
+    {/* <Navbar/> */}
+    {/* <Counter/> */}
+    <CounterIncrement/>
     {/* <Counter1/> */}
     {/* <Counternew/> */}
     {/* <CounterNew1/> */}

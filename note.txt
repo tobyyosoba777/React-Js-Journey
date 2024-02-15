@@ -45,3 +45,6 @@ state changes and update the DOM
 
 React is only responsible for rendering the View and make sure it is in sync with 
 the state
+
+this.setstate is a react method to tell React that the state of the component is going to change
+so at some point in the future the render() method will be called for class based components
