@@ -26,12 +26,6 @@ class CounterIncrement extends Component {
                     fontWeight: 'bold'
                 }} onClick={ () => this.handleIncrement('Added, Current Value: '+this.state.count) } 
                 className='btn btn-secondary btn-sm'>Increment</button>
-                
-                <button style={this.style} onClick={() => {this.handleIncrement('Clicked ' + this.state.count)}}
-                className='btn btn-secondary btn-sm'>
-                    Increment
-                </button>
-
             </div>
             
         );
